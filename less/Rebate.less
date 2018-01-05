@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//html,body {
+//  height: 100%;
+//}
+#header {
+  width: 100%;
+  height: 45px;
+  color:#fff;
+  background-color: orange;
+  font-size: 16px;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+   .back-left {
+     position: absolute;
+     width: 16px;
+     height: 24px;
+     background-image: url("../images/icon_bar.png");
+     background-size:220px 132px;
+     background-position: -103px -10px;
+     left:15px;
+     top: 10px;
+   }
+   >h3{
+     line-height: 45px;
+     font-weight: bold;
+     margin: 0;
+   }
+  .download-right {
+    position: absolute;
+    background-image: url("../images/header_app.png");
+    background-size:34px 34px ;
+    width: 34px;
+    height: 34px;
+    top:6px;
+    right:15px;
+  }
+}
+
+
+#main {
+  //margin-bottom: 195px;
+  padding-top: 45px;
+  padding-bottom: 200px;
+  //height: 100%;
+  .container {
+     .row {
+       >div {
+         background-color: #fff;
+         border-right: 1px solid #ccc;
+         border-bottom: 1px solid #ccc;
+         padding: 5px 10px;
+         vertical-align: middle;
+         width: 50%;
+         .product {
+            >a {
+              display: block;
+              text-align: center;
+              >img {
+                width: 140px;
+                height: 140px;
+              }
+            }
+           .title {
+             color: #333333;
+             height: 36px;
+             line-height: 18px;
+             text-align: left;
+             font-size: 14px;
+             padding: 0 5px;
+             overflow: hidden;
+             font-weight: bold;
+           }
+           .price {
+             color: #ff6c00;
+             height: 18px;
+             line-height: 18px;
+             text-align: left;
+             font-size: 14px;
+             padding: 0 5px;
+             overflow: hidden;
+           }
+           .info {
+             color: #a1a1a1;
+             font-size: 12px;
+             line-height: 18px;
+             text-align: left;
+             padding: 0 5px;
+             overflow: hidden;
+           }
+         }
+       }
+     }
+  }
+}
+
+#footer {
+  position: fixed;
+  width: 100%;
+  background-color: #efefef;
+  height: 200px;
+  bottom: 0px;
+  left: 0;
+  z-index: 999;
+  .morediscount {
+    padding: 10px 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    >button {
+      width: 100%;
+    }
+  }
+  .Ranking {
+    height: 30px;
+    background-color: orange;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 105px;
+    .left-discount {
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+      position: absolute;
+      left: 10px;
+      top: 3px;
+    }
+    .fa-chevron-circle-right {
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+      position: absolute;
+      right: 10px;
+      top: 3px;
+    }
+  }
+  .container {
+    .row {
+      .foot {
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        height: 35px;
+        //background-color: #fff;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        >a {
+          display: block;
+          color: #5a5a5a;
+          border-right: 1px solid #ccc;
+          text-align: center;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+  .last {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    padding: 20px 0;
+    text-align: center;
+    >p {
+      font-size: 12px;
+      margin: 0;
+      >a {
+        color: red;
+      }
+    }
+  }
+}

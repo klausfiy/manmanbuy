@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+input {
+  outline: none;
+  border: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  position: relative;
+}
+#header {
+  height: 44px;
+  background-color: #fe4a65;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+#header .main-logo {
+  position: absolute;
+  left: 10px;
+  height: 44px;
+  line-height: 44px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+#header .search {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 7px;
+  margin-right: 30px;
+  margin-left: 64px;
+}
+#header .search form > input {
+  height: 26px;
+  line-height: 26px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #666;
+}
+#header .main-cat {
+  position: absolute;
+  right: 10px;
+  height: 44px;
+  line-height: 44px;
+}
+#header .main-cat > i {
+  color: #fff;
+}
+#main {
+  margin-top: 44px;
+  margin-bottom: 96px;
+  height: 100%;
+}
+#main #slide {
+  height: 267.44px;
+  width: 100%;
+}
+#main #slide img {
+  width: 100%;
+}
+#main #slide > .swiper-pagination > span {
+  background-color: #fff;
+}
+#main #nav > .baicaijiaTitle {
+  overflow: hidden;
+  width: 100%;
+}
+#main #nav > .baicaijiaTitle > ul {
+  border-bottom: 1px solid #ccc;
+  height: 35px;
+  line-height: 35px;
+  width: 1386.66666667px;
+  margin-bottom: 0;
+}
+#main #nav > .baicaijiaTitle > ul > li {
+  width: 106.66666667px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+#main #nav > .baicaijiaTitle > ul > li:last-child {
+  border-right: none;
+}
+#main #nav > .baicaijiaTitle > ul > li.active > a {
+  color: red;
+}
+#main #nav > .baicaijiaTitle > ul > li > a {
+  color: #666;
+}
+#footer {
+  z-index: 999;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #efefef;
+  color: #666;
+  width: 100%;
+}
+#footer > .container > .row {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+#footer > .container > .row > div {
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-right: 1px solid #c4c4c4;
+}
+#footer > .website {
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  padding: 15px 0;
+  height: 60px;
+}
+#footer > .website > p > .phone {
+  color: #666;
+}
+#footer > .website > p > .phone-app {
+  color: red;
+}

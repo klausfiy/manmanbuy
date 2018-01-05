@@ -1,0 +1,73 @@
+$(function(){
+    getProductList({
+        categoryid:id,
+        pageid:pageid
+    });
+    var miniRefresh = new MiniRefresh({
+        container: '#minirefresh',
+        down: {
+            callback: function() {
+                // 下拉事件
+                pageid = 1;
+                getProductList({
+                    categoryid:id,
+                    pageid:pageid
+                });
+                console.log(pageid);
+                miniRefresh.endDownLoading();
+            }
+        },
+        up: {
+    
+            callback: function() {
+                pageid ++;
+                
+                // 上拉事件
+                getProductList({
+                    categoryid:id,
+                    pageid:pageid
+                },function(pageCount){
+                    if(pageid>pageCount){
+                        pageid = 1;
+                        miniRefresh.endUpLoading(true); 
+                        return;                   
+                    }else{
+                        miniRefresh.endUpLoading(false);
+                    }
+                    // console.log(pageid);
+                });
+                // 注意，由于默认情况是开启满屏自动加载的，所以请求失败时，请务必endUpLoading(true)，防止无限请求
+            }
+        }
+    });
+ // 设置下拉刷新图标
+ $('.minirefresh-downwrap .downwrap-content p').first().removeClass().addClass('glyphicon glyphicon-refresh').css({top:-3,color:'#666'});
+})
+var id = getQueryString('id');
+var pageid = 1;
+
+//获取url中的参数并且解决中文乱码问题
+function getQueryString(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    var result = window.location.search.substr(1).match(reg);
+    return result ? decodeURIComponent(result[2]) : null;
+}
+
+function getProductList(options,callback){
+    // console.log(options);
+    $.ajax({
+        url: 'http://127.0.0.1:9090/api/getproductlist',
+        data: options,
+        success:function(data){
+            // console.log(data);
+            var html = template('productListTmp',data);
+            $('.product-list').append(html);
+            var pageSize = $('.product-list .media').data('page-size');
+            var totalCount = $('.product-list .media').data('total-count');
+            var pageCount = Math.ceil(totalCount / pageSize);
+            // console.log('总页数:'+pageCount);
+            callback && callback(pageCount);
+        }
+    })
+
+}

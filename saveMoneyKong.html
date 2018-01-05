@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买~省钱控</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./less/saveMoneyKong.css">
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <a href="index.html" class="glyphicon glyphicon-menu-left"></a>
+            <img src="./images/header_app.png" class="header-app" alt="">
+            <h4>省钱控-最</h4>
+        </div>
+    </header>
+    <main id="main" data-spy="scroll" data-target="#navbar-example">
+        <div class="container" id="top" >
+            <ul class="media-list">
+                <li class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="http://img2017.manmanbuy.com/2018010015550074896.jpg" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p class="media-heading">年货：小角楼 52度小角楼金鑫6年浓香型白酒500ml <span>39元包邮（券后）</span></p>
+                        <div class="other">
+                                天猫旗舰店 | 01-03 15:48 <span class="glyphicon glyphicon-envelope pull-right">10</span>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="pagination">
+                <div class="row">
+                    <li class="prev col-xs-4"><a  href="#" class="prev-page">上一页</a></li>
+                    <select class="selectPage col-xs-4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>  
+                    </select>
+                    <li class="next col-xs-4"><a  href="#" class="next-page">下一页</a></li>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="nav">
+        <div class="title">
+            <a href="index.html">首页 ></a>
+            <a href="#">省钱控</a>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#">登入</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="glyphicon glyphicon-circle-arrow-up">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+            <a href="#" class="download">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#"> -- 掌上比价平台</a>
+            <p>m.manmanbuy.com</p>
+        </div> 
+    </footer>
+    <script id="getSaveMoneyTmp" type="text/html">
+        {{each result as value i}}
+            <li class="media">
+                <div class="media-left">
+                    <a href="#">
+                        {{#value.productImgSm}}
+                    </a>
+                </div>
+                <div class="media-body">
+                    <p class="media-heading">{{value.productName}}</p>
+                    <div class="other">
+                            {{value.productFrom}} | {{value.productTime}} <span class="glyphicon glyphicon-envelope pull-right"><i>{{value.productComCount.replace('有','').replace('人评论','')}}</i></span>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="./js/saveMoneyKong.js"></script>
+</body>
+
+</html>

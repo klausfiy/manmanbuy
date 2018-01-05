@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控 —— 详情页面</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./less/saveProductList.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+<!-- 顶部通栏 -->
+    <header id="header" class="clearfix">
+        <a href="gobalBuyCheaper.html" class="arrow-left glyphicon glyphicon-menu-left">
+            
+        </a>
+        <p>省钱控-最新优惠</p>
+        <a href="#" class="onload-app-right">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+<!-- 页面主体 -->
+    <section id="main">
+        <!--         
+        <h4 class="page-title"><strong>我是酱油</strong></h4> 
+        <p><span class="from">来源</span> <span class="times">时间</span> <span class="author">小编</span> </p>
+        <div class="content">
+            <img src="./images/ic_temai.png" alt="">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos modi ipsa enim quae quaerat cum, explicabo eveniet earum dolorem sit laudantium reiciendis cupiditate voluptates quas doloremque hic quia natus laboriosam aperiam rerum ipsum inventore illum necessitatibus est. Ipsum vitae ex eum sequi deleniti voluptate necessitatibus molestias. Dolore quod nobis vel?
+        </div>
+        <img src="./images/mmbweixin2.png" alt="" class="largeImage">
+        <div class="product-city">
+            <ul id="disstorck">
+                <li>
+                    <a href="javascript:;" onclick="setdiqu('北京','有货')">
+                        <span>北京<strong>有货</strong></span>
+                    </a>
+                </li>
+                
+                
+                
+                <li><a href="javascript:;" onclick="setdiqu('河北','有货')"><span>河北<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('山西','有货')"><span>山西<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('内蒙古','有货')"><span>内蒙古<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('辽宁','有货')"><span>辽宁<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('吉林','有货')"><span>吉林<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('黑龙江','有货')"><span>黑龙江<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('天津','有货')"><span>天津<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('福建','有货')"><span>福建<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('江西','有货')"><span>江西<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('山东','有货')"><span>山东<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('重庆','有货')"><span>重庆<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('河南','有货')"><span>河南<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('湖北','有货')"><span>湖北<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('湖南','有货')"><span>湖南<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('广西','有货')"><span>广西<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('海南','有货')"><span>海南<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('四川','有货')"><span>四川<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('广东','有货')"><span>广东<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('贵州','有货')"><span>贵州<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('云南','有货')"><span>云南<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('西藏','有货')"><span>西藏<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('甘肃','有货')"><span>甘肃<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('青海','有货')"><span>青海<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('陕西','有货')"><span>陕西<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('宁夏','有货')"><span>宁夏<strong>有货</strong></span></a></li><li><a href="javascript:;" onclick="setdiqu('新疆','有货')"><span>新疆<strong>有货</strong></span></a></li>
+            </ul>
+        </div>
+        <section id="buyProduct">
+            <button>前往购买</button>
+        </section>
+        <img src="./images/mmbweixin2.png" alt="" id="qrCode">
+        <div class="comments">
+            <div class="cu-content-pl ui-border-t">
+                <div class="tit">发表评论</div>
+                <div class="reply">
+                    <div class="form">
+                        <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                        <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                        <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="首度 LC0402 led吸顶灯 24W" type="hidden">
+                        <div class="ctrl">
+                            <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                        </div>
+                    </div>
+                </div>
+                <div class="tit" id="newcomment">最新评论</div>
+                <div class="list">
+                    <ul>
+                    <li class="ui-border-b">
+                        <div class="userimg">
+                            <img src="http://bbs.manmanbuy.com/images/face/none.gif">
+                        </div>
+                        <div class="con">
+                            <div class="name clearfix">
+                                <div class="username">桂林的天</div>
+                                <div class="time">2016/10/25 13:33:20</div>
+                            </div>
+                            <div class="content">为什么这图看上去这么大啊
+                                <img src="http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/d9/dizzya_thumb.gif" width="22" height="22">
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        -->
+    </section>
+<!-- 底部通栏 -->   
+    <section id="footer">
+        <p>
+            <a>手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </section>
+    <script id="productListTmp" type="text/html">
+        {{each result as value i}}
+        <h4 class="page-title"><strong>{{value.productName}}</strong></h4>
+        <p><span class="from">{{value.productFrom}}</span> <span class="times">{{value.productTime}}</span> <span class="author">{{value.productTips}}</span> </p>
+        <div class="content">
+            {{#value.productImgSm}}
+            {{value.productInfo}}
+            {{value.productInfo1}}
+            {{value.productInfo2}}
+        </div>
+        {{#value.productImgLg}}
+        <div class="product-city">
+            {{#value.productCity}}
+        </div>
+        <section id="buyProduct">
+            <button>前往购买</button>
+        </section>
+        <img src="./images/mmbweixin2.png" alt="" id="qrCode">
+        <div class="comments">
+            {{#value.productComment}}
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/saveProductList.js"></script>
+</body>
+
+</html>

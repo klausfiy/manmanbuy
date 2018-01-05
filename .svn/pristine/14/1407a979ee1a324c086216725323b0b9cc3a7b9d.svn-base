@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣页面</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./less/gobalBuyCheaper.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+<!-- 顶部通栏 -->
+    <header id="header" class="clearfix">
+        <a href="index.html" class="arrow-left glyphicon glyphicon-menu-left">
+            
+        </a>
+        <p>省钱控-最新优惠</p>
+        <a href="#" class="onload-app-right">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+<!-- 产品展示页面 -->
+    <section id="main">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                <img class="media-object" src="..." alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">商品名<i class="prize">价格</i></p>
+                <p>来源 | 时间 <i class="commemts glyphicon glyphicon-envelope">人数</i></p> 
+            </div>
+        </div>
+    </section>
+<!-- 点击更新商品页面 -->
+    <section id="moreProduct">
+        <button class="left-perv">上一页</button>
+            <select name="" id="pageCate">
+                    <option>1</option>                
+            </select>
+        <button class="right-next">下一页</button>
+    </section>
+    <section id="footer">
+        <p>
+            <a>手机app下载</a> 慢慢买手机版 -- 掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </section>
+    <!-- 后台数据如果是直接返回标签，则需要在value前面加上#号 -->
+    <script id="goodsTmp" type="text/html">
+        {{each result as value i}}
+        <div class="media">
+            <div class="media-left">
+                <a href="#" data-id="{{value.productId}}">
+                {{#value.productImgSm}}
+                </a>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">{{value.productName}}<i class="prize">{{value.productPinkage}}</i></p>
+                <p>{{value.productFrom}} | {{value.productTime}}<i class="commemts glyphicon glyphicon-envelope"> {{value.productComCount}}</i></p> 
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/gobalBuyCheaper.js"></script>
+</body>
+
+</html>

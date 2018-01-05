@@ -1,0 +1,192 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+i {
+  font-style: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+#header {
+  padding: 10px 10px 10px 20px ;
+  background-color: #f18622;
+  width: 100%;
+}
+#header .logo-left {
+  display: block;
+  margin-top: 5px;
+  height: 25px;
+  float: left;
+}
+#header .logo-left > img {
+  height: 100%;
+}
+#header .onload-app-right {
+  display: block;
+  height: 35px;
+  float: right;
+}
+#header .onload-app-right > img {
+  height: 100%;
+}
+#nav .search {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#nav .search > input {
+  background-color: #eee;
+  height: 30px;
+  width: 280px;
+  border-radius: 15px;
+  border: none;
+  text-indent: 20px;
+}
+#nav .search > button {
+  background-color: #f18622;
+  height: 30px;
+  width: 60px;
+  position: absolute;
+  left: 250px;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+#nav .nav-categroy {
+  padding: 15px;
+  height: 240px;
+  overflow: hidden;
+}
+#nav .nav-categroy .row > div {
+  padding: 15px 10px;
+  text-align: center;
+}
+#nav .nav-categroy .row > div > a {
+  width: 100%;
+  display: block;
+}
+#nav .nav-categroy .row > div > a > img {
+  width: 100%;
+}
+#nav .nav-categroy .row > div > a > i {
+  width: 100%;
+  font-size: 10px;
+  font-style: normal;
+}
+#discount .banner {
+  padding: 0 10px;
+  background-color: rgba(224, 137, 37, 0.877);
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  color: #fff;
+}
+#discount .banner img {
+  float: right;
+  margin-top: 5px;
+}
+#discount .product-list {
+  padding: 10px;
+}
+#discount .product-list .media .media-left > a img {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+}
+#discount .product-list .media-body > p > i {
+  color: rgba(224, 137, 37, 0.877);
+}
+#discount .product-list .media-body > .product-from {
+  font-size: 10px;
+}
+#discount .product-list .media-body > .count-sum {
+  float: right;
+  height: 14px;
+  line-height: 14px;
+  font-size: 10px;
+}
+#discount .product-list .media-body > .count-sum::before {
+  vertical-align: baseline;
+}
+#moreInfo {
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+}
+#moreInfo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.brand-ranking {
+  padding: 0px 10px;
+  background-color: rgba(224, 137, 37, 0.877);
+  color: #fff;
+  font-size: 18px;
+  height: 35px;
+  line-height: 35px;
+}
+.brand-ranking > img {
+  margin-top: 7px;
+  float: right;
+}
+#button-nav {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#button-nav .row {
+  text-align: center;
+  height: 30px;
+  display: block;
+  box-sizing: border-box;
+}
+#button-nav .row > a {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+}
+#button-nav .row > a:last-child {
+  top: 0;
+}
+#footer p {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+#footer p > a {
+  color: #f10215;
+}

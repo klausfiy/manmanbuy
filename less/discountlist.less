@@ -1,0 +1,222 @@
+@main-color:#ff841d; 
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+    box-sizing: border-box;
+    /*  清除移动端点击（按住）高亮颜色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+input {
+    /* 内边框  点击输出框出来的边框*/
+    outline: 0;
+    /* 外边框 */
+    border: 0;
+}
+
+img {
+    /* 设置图片对齐方式和文字一样解决图片3px的间隙的问题 */
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html ,body {
+    height: 100%;
+}
+#header {
+    z-index: 999;
+    background-color: #f20;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 50px;
+    >div {
+        padding: 10px;
+        a {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            text-decoration: none;
+            &::before{
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+        h4 {
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+        .header-app {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            width: 35px;
+            height: 35px;    
+        }
+    }
+
+}
+#main {
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    #minirefresh{
+        > div {
+            top: 50px;
+        }
+        .minirefresh-scroll{
+            position: relative;
+            .minirefresh-upwrap {
+                position: relative;
+                bottom: 20px;
+                width: 100%;
+                .upwrap-tips {
+                    font-size: 14px;
+                }
+            }
+            .minirefresh-downwrap {
+                .downwrap-content {
+                    >p.glyphicon  {
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+            .title {
+                text-align: center;
+                color: #666;
+                padding: 5px;
+                background-color: #fff;
+            }
+            .discount-list {
+                .media-list {
+                    > li {
+                        padding: 10px;
+                        border-bottom: 1px solid #ccc;
+                        position: relative;
+                        >a {
+                            display: block;
+                            text-decoration: none;
+                            color: #333;
+                            .media-left {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                            .media-body {
+                                h4 {
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                }
+                                .arrow {
+                                    position: absolute;
+                                    right: 5px;
+                                    top: 50%;
+                                    color: #666;
+                                }
+                                .price {
+                                    font-weight: bold;
+                                    color: #666;                                    
+                                }
+                                .deadline {
+                                    color: @main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+    
+}
+#footer {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #ccc;
+    background-color: #f2f2f2;
+    .container {
+        .row {
+            > div {
+                padding: 0;
+                > a {
+                    display: block;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    line-height: 30px;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #666;
+                    & + {
+                        border-left: 1px solid #ccc;
+                    }
+                    &::before {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal {
+    >div{
+        top: 50%;
+        margin-top: -50px;
+        .modal-content {
+            width: 220px;   
+            margin: 0 auto;
+            #carousel-example-generic {
+                .carousel-inner {
+                    .item {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                > ol {
+                     li {
+                         background-color: #666;
+                         &.active {
+                             background-color: #f40;
+                         }
+                     }
+                }
+            }
+            
+        }
+    }
+}

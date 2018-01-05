@@ -1,0 +1,165 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+input {
+  /* 内边框  点击输出框出来的边框*/
+  outline: 0;
+  /* 外边框 */
+  border: 0;
+}
+img {
+  /* 设置图片对齐方式和文字一样解决图片3px的间隙的问题 */
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+  background-color: #f2f2f2;
+}
+html,
+body {
+  height: 100%;
+}
+#header {
+  z-index: 999;
+  background-color: #ff841d;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+}
+#header > a {
+  display: block;
+  padding: 10px;
+}
+#header > a .header-logo {
+  height: 30px;
+}
+#header > a .header-app {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 35px;
+  height: 35px;
+}
+#main {
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#main #minirefresh > div {
+  top: 50px;
+}
+#main #minirefresh .minirefresh-scroll {
+  position: relative;
+}
+#main #minirefresh .minirefresh-scroll form {
+  background-color: #fff;
+  height: 51px;
+  padding: 10px;
+  position: relative;
+}
+#main #minirefresh .minirefresh-scroll form .search {
+  background-color: #eee;
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+#main #minirefresh .minirefresh-scroll form .btn-search {
+  width: 65px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ff841d;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#main #minirefresh .minirefresh-scroll #accordion {
+  padding: 5px;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default {
+  border-radius: 5px;
+  margin-top: 0;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default .panel-heading h4 a {
+  display: block;
+  text-decoration: none;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default .panel-heading h4 a::before {
+  float: right;
+  color: #666;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default .panel-collapse .panel-body {
+  padding: 0;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default .panel-collapse .panel-body .container .row > div {
+  padding: 0;
+}
+#main #minirefresh .minirefresh-scroll #accordion .panel-default .panel-collapse .panel-body .container .row > div a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+}
+#footer {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+#footer .container .row > div {
+  padding: 0;
+}
+#footer .container .row > div > a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #666;
+  border-left: 1px solid #ccc;
+}
+#footer .container .row > div > a::before {
+  margin-right: 5px;
+}

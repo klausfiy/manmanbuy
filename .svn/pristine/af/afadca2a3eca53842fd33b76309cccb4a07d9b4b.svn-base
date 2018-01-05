@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买~分类商品列表</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./less/categorylist.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#">
+            <img src="./images/header_app.png" class="header-app" alt="">
+            <img src="./images/header_logo.png" class="header-logo" alt="">
+        </a>
+    </header>
+    <main id="main">
+        <!-- minirefresh开头的class请勿修改 -->
+        <div id="minirefresh" class="minirefresh-wrap">
+            <div class="minirefresh-scroll">
+                <form action="#">
+                    <input type="search" class="search" placeholder="请输入想要搜索的商品">
+                    <bottom class="btn-search">搜索</bottom>
+                </form>
+                <div class="product">
+                    <div class="product-heading container">
+                        <div class="row">
+                            <div class="col-xs-3"><a href="#" class="active">综合</a></div>
+                            <div class="col-xs-3"><a href="#">销量</a></div>
+                            <div class="col-xs-3"><a href="#">价格</a></div>
+                            <div class="col-xs-3"><a href="#" class="glyphicon glyphicon-filter">筛选</a></div>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <!-- <div class="media">
+                            <div class="media-left media-bottom media-pic">
+                                <a href="#">
+                                    <img class="media-object" src="http://pro-img.zuyushop.com/ProPic/20173/small80/Thumb_2017030009061421571.jpg" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">索尼(SONY) KD-100Z9D 100英寸 支持3D 4K超高清HDR智能网络电视</h4>
+                                <p class="price">¥489999</p>
+                                <p class="other"><span class="offer pull-left">3商城报价</span> <span class="comment pull-right">有1人评论</span></p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4"><a href="#">登入</a></div>
+                <div class="col-xs-4"><a href="#">注册</a></div>
+                <div class="col-xs-4"><a href="#" class="glyphicon glyphicon-circle-arrow-up">返回顶部</a></div>
+            </div>
+        </div>   
+        <!-- <div class="app">
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#"> -- 掌上比价平台</a>
+            <p>m.manmanbuy.com</p>
+        </div>  -->
+    </footer>
+    <script id="productListTmp" type="text/html">
+        {{each result as value i}}
+            <div class="media" data-page-size="{{pagesize}}" data-total-count="{{totalCount}}">
+                <a href="categoryDetail.html?productId={{value.productId}}">
+                    <div class="media-left media-bottom media-pic">
+                         {{#value.productImg}}
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{value.productName}}</h4>
+                        <p class="price">¥{{value.productPrice}}</p>
+                        <p class="other"><span class="offer pull-left">{{value.productQuote.replace('报价\(','').replace('\)','')}}商城报价</span> <span class="comment pull-right">有{{value.productCom.replace('评论\(','').replace('\)','')}}人评论</span></p>
+                    </div>
+                </a>
+            </div>
+         {{/each}}   
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="./js/categorylist.js"></script>
+</body>
+
+</html>

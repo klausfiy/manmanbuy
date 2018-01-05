@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css"/>
+    <link rel="stylesheet/less" href="./less/navigate.less"/>
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id="header">
+    <i class="back-left"></i>
+    <h3>国内折扣</h3>
+    <i class="download-right"></i>
+    </header>
+    <section id="main">
+       <div class="link">
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+           <a href="#">
+               <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt=""/>
+               京东商城
+           </a>
+       </div>
+    </section>
+
+    <footer id="footer">
+        <div class="morediscount">
+            <button>更多优惠信息</button>
+        </div>
+        <div class="Ranking">
+            <p class="left-discount">品牌排行</p>
+            <p class="fa fa-chevron-circle-right"></p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="foot">
+                    <a class="col-xs-4">登录</a>
+                    <a class="col-xs-4">注册</a>
+                    <a class="col-xs-4" id="returntop">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <script id="linkTmp" type="text/html">
+        {{each result as value i}}
+            <a href="{{value.navHref}}">
+                <img src="{{value.navImg}}" alt=""/>
+                {{value.navTitle}}
+            </a>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./js/navigate.js"></script>
+</body>
+</html>

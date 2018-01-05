@@ -1,0 +1,146 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  outline: none;
+  border: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  position: relative;
+}
+i,
+em {
+  font-style: normal;
+}
+b {
+  font-weight: normal;
+}
+#header {
+  padding: 10px 10px 10px 20px;
+  background-color: #f18622;
+  width: 100%;
+}
+#header .logo-left {
+  display: block;
+  margin-top: 5px;
+  height: 25px;
+  float: left;
+}
+#header .logo-left > img {
+  height: 100%;
+}
+#header .onload-app-right {
+  display: block;
+  height: 35px;
+  float: right;
+}
+#header .onload-app-right > img {
+  height: 100%;
+}
+#search .search {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#search .search > form {
+  margin-right: 70px;
+}
+#search .search > form > input {
+  background-color: #eee;
+  height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  text-indent: 20px;
+}
+#search .search > button {
+  background-color: #f18622;
+  height: 30px;
+  width: 60px;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#main > .product > a {
+  width: 100%;
+  height: 150px;
+}
+#main > .product > a > .container > .row {
+  height: 150px;
+}
+#main > .product > a > .container > .row > .col-xs-3 {
+  height: 150px;
+  padding-left: 40px;
+}
+#main > .product > a > .container > .row > .col-xs-3 > img {
+  margin-top: 20px;
+}
+#main > .product > a > .container > .row > .col-xs-9 {
+  height: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#main > .product > a > .container > .row > .col-xs-9 > .title {
+  color: #000;
+  line-height: 25px;
+  font-size: 18px;
+}
+#main > .product > a > .container > .row > .col-xs-9 > .price {
+  line-height: 40px;
+  font-size: 18px;
+  color: red;
+}
+#main > .product > a > .container > .row > .col-xs-9 > .other {
+  line-height: 40px;
+  color: #666;
+}
+#main > .product > a > .container > .row > .col-xs-9 > .other > .quote {
+  margin-right: 5px;
+}
+#footer {
+  z-index: 999;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #efefef;
+  color: #666;
+  width: 100%;
+}
+#footer > .container > .row {
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+#footer > .container > .row > div {
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-right: 1px solid #c4c4c4;
+}
+#footer > .website {
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  padding: 15px 0;
+  height: 60px;
+}
+#footer > .website > p > .phone {
+  color: #666;
+}
+#footer > .website > p > .phone-app {
+  color: red;
+}

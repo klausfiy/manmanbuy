@@ -1,0 +1,26 @@
+
+var id= getQueryString('id');
+$(function(){
+    UpdateDetail();
+});
+
+function UpdateDetail(){
+    $.ajax({
+        url:'http://mmb.ittun.com/api/getdiscountproduct',
+        data:{
+            'productid':id
+        },
+        success:function(data){
+            console.log(data);
+            var html=template('productDetail',data);
+
+            $('#main .top').html(html);
+        }
+    })
+}
+
+function getQueryString(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    var result = window.location.search.substr(1).match(reg);
+    return result ? decodeURIComponent(result[2]) : null;
+}

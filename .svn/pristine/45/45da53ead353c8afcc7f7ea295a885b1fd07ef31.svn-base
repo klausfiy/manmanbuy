@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css"/>
+    <link rel="stylesheet/less" href="./less/detail.less"/>
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+    <header id="header">
+        <i class="back-left"></i>
+        <h3>国内折扣</h3>
+        <i class="download-right"></i>
+    </header>
+    <section id="main">
+        <div class="product-detail">
+            <div class="top">
+                <h3>乐泡（lepow）美牛 20000mAh 聚合物 充电宝/移动电源 苹果安卓手机平板通用商务移动电源 咖</h3>
+                <h4>69.9元</h4>
+                <div class="product-info">
+                    <span class="mall">京东商城</span>
+                    <span class="time">01-02 16:35</span>
+                    <span class="author">做个活动难啊/ 慢慢买</span>
+                </div>
+                <div class="content clearfix">
+                    <div class="picwrap">
+                        <img src="./images/ic_pp.png" alt=""/>
+                    </div>
+                    <div class="conn">
+                        西集网现售16499元，在页面下方领取5000元满减券实付11499元包邮，近期好价，需要的可以去看看~
+                        <p></p>
+                    </div>
+                </div>
+                <div class="leave">
+                    <input type="button" value="前往购买"/>
+                </div>
+            </div>
+            <div class="tit">
+                发表评论
+            </div>
+            <div class="reply">
+                <div class="form">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <div class="ctrl clearfix">
+                        <input type="text" value="发表评论"/>
+                    </div>
+                </div>
+            </div>
+            <div class="newcomment">
+                最新评论
+            </div>
+            <div class="run">
+                标签:跑步鞋
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="morediscount">
+            <button>更多优惠信息</button>
+        </div>
+        <div class="Ranking">
+            <p class="left-discount">品牌排行</p>
+            <p class="fa fa-chevron-circle-right"></p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="foot">
+                    <a class="col-xs-4">登录</a>
+                    <a class="col-xs-4">注册</a>
+                    <a class="col-xs-4">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <p>
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+
+    <script id="productDetail" type="text/html">
+          {{each result as value i}}
+              <h3>{{value.productName}}</h3>
+              <h4>{{value.productPrice}}</h4>
+              <div class="product-info">
+                  <span class="mall">{{value.productFrom}}</span>
+                  <span class="time">{{value.productTime}}</span>
+                  <span class="author">{{value.productTips}}</span>
+              </div>
+              <div class="content clearfix">
+                  <div class="picwrap">
+                      {{#value.productImg}}
+                  </div>
+                  <div class="conn">
+                      {{value.productInfo}}
+                      <p></p>
+                  </div>
+              </div>
+              <div class="leave">
+                  <input type="button" value="前往购买"/>
+              </div>
+
+          {{/each}}
+</script>
+    <script id="discount" type="text/html">
+        {{each result as value i }}
+        <div class="col-xs-6">
+            <div class="product">
+                <a href="detail.html?id={{value.productId}}" class="product-img">{{#value.productImg}}</a>
+                <div class="title">{{value.productName}}</div>
+                <div class="price">{{value.productPrice}}</div>
+                <div class="info">{{value.productFrom}} | {{value.productTime}}</div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./js/detail.js"></script>
+</body>
+</html>

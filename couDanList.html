@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/couDanList.css">
+</head>
+<body>
+<header id="header">
+    <a href="#" class="icon-back"><span class="glyphicon glyphicon-menu-left"></span></a>
+    <h1>凑单品</h1>
+</header>
+<div id="search" class="container">
+    <div class="row">
+        <div class="icon  col-xs-2">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+        <div class="col-xs-10">
+            <div class="row">
+                <div class="dropdown col-xs-4 product-shop">
+                    <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="shop-title">京东</span>
+                        <span class="glyphicon glyphicon-triangle-bottom arr"></span>
+                    </a>
+                    <ul class="dropdown-menu shop" aria-labelledby="dLabel">
+                    </ul>
+                </div>
+                <div class="dropdown col-xs-4 product-area">
+                    <a data-target="#" href="http://example.com" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="area-title">华北</span>
+                        <span class="glyphicon glyphicon-triangle-bottom arr"></span>
+                    </a>
+                    <ul class="dropdown-menu shop-area" aria-labelledby="dLabel">
+                    </ul>
+                </div>
+                <div class="dropdown col-xs-4 product-price">
+                    <a data-target="#" href="http://example.com" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="title">1元</span>
+                        <span class="glyphicon glyphicon-triangle-bottom arr"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li>全部价格</li>
+                        <li>1-3元</li>
+                        <li>3-5元</li>
+                        <li>5-10元</li>
+                        <li>10-15元</li>
+                        <li>15元以上</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="main">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <div class="row bdt bdb">
+            <div class="col-xs-3 col-sm-3 col-md-3">登陆</div>
+            <div class="col-xs-3 col-sm-3 col-md-3 bdl bdr">注册</div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <a href="#header">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="shortCut">
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <span> -- 掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script id="shopTmp" type="text/html">
+    {{each result}}
+    <li data-shopid="{{$value.shopId}}">{{$value.shopName}}</li>
+    {{/each}}
+</script>
+<script id="shopAreaTmp" type="text/html">
+    {{each result}}
+    <li data-areaid="{{$value.areaId}}">{{$value.areaName}}</li>
+    {{/each}}
+</script>
+<script id="detailTmp" type="text/html">
+    {{each result}}
+    <div class="col-xs-6">
+        <div class="img">
+            <img src="{{$value.productImg}}" alt="">
+        </div>
+        <p>{{$value.productName}}</p>
+        <div>
+            <i>￥</i>
+            <span>{{$value.productPrice.slice(1)}}</span>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/couDanList.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买~分类商品详情</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./less/categoryDetail.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#">
+            <img src="./images/header_app.png" class="header-app" alt="">
+            <img src="./images/header_logo.png" class="header-logo" alt="">
+        </a>
+    </header>
+    <main id="main">
+        <!-- minirefresh开头的class请勿修改 -->
+        <div id="minirefresh" class="minirefresh-wrap">
+            <div class="minirefresh-scroll">
+                <form action="#">
+                    <input type="search" class="search" placeholder="请输入想要搜索的商品">
+                    <bottom class="btn-search">搜索</bottom>
+                </form>
+                <div class="product">
+                    <div class="product-nav">
+                        <a href="#">首页 > </a>
+                        <a href="#">平板电视 > </a>
+                        <a href="#">索尼 100z9d</a>
+                    </div>
+                    <div class="product-list">
+                        <div class="media">
+                            <div class="media-pic">
+                                <img src="http://www.zuyushop.com/wap/images/sc.jpg" class="small-img" alt="">
+                                <img class="media-object large-img" src="http://pro-img.zuyushop.com/ProPic/20173/small80/Thumb_2017030009061421571.jpg" alt="...">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">索尼(SONY) KD-100Z9D 100英寸 支持3D 4K超高清HDR智能网络电视</h4>
+                                <p class="other"><span class="price pull-left">当前最低 :<i>¥489999</i></span> <span class="comment pull-right">优选评论:1条</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-4">比价购买</div>
+                        <div class="col-xs-4">产品参数</div>
+                        <div class="col-xs-4">优选评论</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4"><a href="#">登入</a></div>
+                <div class="col-xs-4"><a href="#">注册</a></div>
+                <div class="col-xs-4"><a href="#" class="glyphicon glyphicon-circle-arrow-up">返回顶部</a></div>
+            </div>
+        </div>   
+        <!-- <div class="app">
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#"> -- 掌上比价平台</a>
+            <p>m.manmanbuy.com</p>
+        </div>  -->
+    </footer>
+ 
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="./js/categoryDetail.js"></script>
+</body>
+
+</html>

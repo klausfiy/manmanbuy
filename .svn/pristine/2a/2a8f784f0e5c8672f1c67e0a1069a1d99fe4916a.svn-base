@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css"/>
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css"/>
+    <link rel="stylesheet/less" href="./less/Rebate.less"/>
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+<header id="header">
+    <i class="back-left"></i>
+    <h3>国内折扣</h3>
+    <i class="download-right"></i>
+</header>
+
+<div id="minirefresh" class="minirefresh-wrap">
+    <div class="minirefresh-scroll">
+        <section id="main">
+            <div class="container">
+                <div class="row  commodity">
+                    <div class="col-xs-6">
+                        <div class="product">
+                            <a href="#" class="product-img"><img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20180102/12/88446ec6e4fd4296b560050a122d1237.jpg" alt=""/></a>
+                            <div class="title">沃丰 蚬子干蛤蜊干 245g 袋装 海产干货 *3件</div>
+                            <div class="price">59元（合19.67元/件）</div>
+                            <div class="info">京东商城 | 2018/1/2 12:48</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="product">
+                            <a href="#" class="product-img"><img src="http://wnzk-qiniu.zuyushop.com/r_img/img/20180102/12/88446ec6e4fd4296b560050a122d1237.jpg" alt=""/></a>
+                            <div class="title">沃丰 蚬子干蛤蜊干 245g 袋装 海产干货 *3件</div>
+                            <div class="price">59元（合19.67元/件）</div>
+                            <div class="info">京东商城 | 2018/1/2 12:48</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="morediscount">
+        <button>更多优惠信息</button>
+    </div>
+    <div class="Ranking">
+        <p class="left-discount">品牌排行</p>
+        <p class="fa fa-chevron-circle-right"></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="foot">
+                <a class="col-xs-4">登录</a>
+                <a class="col-xs-4">注册</a>
+                <a class="col-xs-4" id="returntop">返回顶部</a>
+            </div>
+        </div>
+    </div>
+    <div class="last">
+        <p>
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</footer>
+<script id="discount" type="text/html">
+    {{each result as value i }}
+    <div class="col-xs-6">
+        <div class="product">
+            <a href="detail.html?id={{value.productId}}" class="product-img">{{#value.productImg}}</a>
+            <div class="title">{{value.productName}}</div>
+            <div class="price">{{value.productPrice}}</div>
+            <div class="info">{{value.productFrom}} | {{value.productTime}}</div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./js/Rebate.js"></script>
+</body>
+</html>

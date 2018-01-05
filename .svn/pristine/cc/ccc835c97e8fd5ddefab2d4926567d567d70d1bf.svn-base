@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+i {
+  font-style: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+#header {
+  padding: 10px 10px 10px 20px ;
+  background-color: #f18622;
+  width: 100%;
+}
+#header .logo-left {
+  display: block;
+  margin-top: 5px;
+  height: 25px;
+  float: left;
+}
+#header .logo-left > img {
+  height: 100%;
+}
+#header .onload-app-right {
+  display: block;
+  height: 35px;
+  float: right;
+}
+#header .onload-app-right > img {
+  height: 100%;
+}
+#footer p {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+#footer p > a {
+  color: #f10215;
+}

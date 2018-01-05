@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="./less/promotionDetail.css">-->
+    <link rel="stylesheet" href="./css/promotionDetail.css">
+</head>
+<body>
+<header id="header">
+    <a href="#" class="icon-back"><span class="glyphicon glyphicon-menu-left"></span></a>
+    <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
+    <h1>国内折扣</h1>
+</header>
+<section id="main">
+    <div class="product">
+        <h3>艾格 ES 时尚迷彩印花连帽棉服女15033208440</h3>
+        <h4>126元包邮</h4>
+        <div class="info">
+            <span>天猫旗舰店</span>
+            <span>01-02 11:18</span>
+            <span>半糖 / 慢慢买</span>
+        </div>
+        <div class="detail">
+            <img src="http://img2017.manmanbuy.com/2018010011181050475.jpg" alt="" class="imgSm">
+            <p>
+                时尚的迷彩图案是经久不衰的流行热点，简答搭配就能穿搭出属于你的时尚感，H型廓型也凸显你的随性率真。主品:棉服 面料:棉100.0%,里料:聚酯纤维100.0%
+            </p>
+            <br>
+            <p>
+                天猫艾格官方旗舰店目前特价126元包邮，近期好价，喜欢的朋友可以考虑下。
+            </p>
+            <img src="http://apic-qiniu.zuyushop.com/cuxiaoPic/image/mmbAdmin/20180102111747_4363.jpg" alt="" class="imgLg">
+        </div>
+        <div class="btn-shopping">
+            <button type="button" class="btn btn-warning"> <i class="glyphicon glyphicon-shopping-cart"></i>前往购买</button>
+        </div>
+    </div>
+    <hr>
+    <div class="comment">
+        <div class="writeComment">
+            <p>发表评论</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button type="button" class="btn btn-warning">发表评论</button>
+        </div>
+        <div class="newComment">
+            <p>最新评论</p>
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="bottom bdb">
+        <a href="#">首页</a>
+        <a href="promotion.html">> &nbsp;省钱控</a>
+        <span>> &nbsp;艾格 ES 时尚迷彩印花连帽棉服女15033208440</span>
+    </div>
+    <div class="bottomBanner">
+        <img src="http://m.manmanbuy.com/download/images/logo.png" alt="">
+        <div class="text">
+            <h4>
+                慢慢买APP
+            </h4>
+            <button type="button" class="btn btn-success">立即打开</button>
+            <p>
+                专注全网比价，每一次购物都在为你省钱！
+            </p>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="shortCut">
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <span> -- 掌上比价平台</span>
+    </div>
+    <div class="goShopping container">
+        <div class="row">
+            <div class="col-xs-4">
+                <i class="glyphicon glyphicon-edit"></i>
+                <p>评论</p>
+            </div>
+            <div class="col-xs-8">
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+                <span>前往购买</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script id="productTmp" type="text/html">
+    {{each result}}
+    <h3>{{$value.productName}}</h3>
+    <h4>{{$value.productPinkage}}</h4>
+    <div class="info">
+        <span>{{$value.productFrom}}</span>
+        <span>{{$value.productTime}}</span>
+        <span>{{$value.productTips}}</span>
+    </div>
+    <div class="detail">
+        {{#$value.productImgSm}}
+        <p>
+            {{#$value.productInfo2}}
+        </p>
+        <br>
+        <p>
+            天猫艾格官方旗舰店目前特价126元包邮，近期好价，喜欢的朋友可以考虑下。
+        </p>
+        {{#$value.productImgSm}}
+    </div>
+    <div class="btn-shopping">
+        <button type="button" class="btn btn-warning"> <i class="glyphicon glyphicon-shopping-cart"></i>前往购买</button>
+    </div>
+    {{/each}}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/promotionDetail.js"></script>
+</body>
+</html>

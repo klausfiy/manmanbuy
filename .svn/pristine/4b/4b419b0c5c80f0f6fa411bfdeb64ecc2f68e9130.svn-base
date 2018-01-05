@@ -1,0 +1,201 @@
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+.bdl {
+    border-left: 1px solid #000;
+}
+.bdr {
+    border-right: 1px solid #000;
+}
+.bdt {
+    border-top: 1px solid #000;
+}
+.bdb {
+    border-bottom: 1px solid #000;
+}
+#header {
+    height: 1.375rem;
+    background-color: #ff841d;
+}
+#header .icon-back {
+    float: left;
+}
+#header .icon-back > span {
+    display: inline-block;
+    width: 1.5625rem;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    text-align: center;
+    font-size: 0.625rem;
+    color: #fff;
+}
+#header > h1 {
+    overflow: hidden;
+    font-size: 0.625rem;
+    line-height: 1.375rem;
+    text-align: center;
+    color: #fff;
+    margin: 0 3.34375rem 0 3.34375rem;
+}
+#header .app {
+    float: right;
+    width: 1.5625rem;
+    height: 1.375rem;
+    text-align: center;
+    line-height: 1.375rem;
+    margin-right: 0.3125rem;
+}
+#header .app > img {
+    width: 65%;
+    height: 75%;
+}
+#main .product {
+    padding: 0.125rem 0.3125rem;
+}
+#main .product > h3 {
+    font-size: 0.75rem;
+}
+#main .product > h4 {
+    color: #ff6c00;
+    font-size: 0.5625rem;
+}
+#main .product .info {
+    color: #ccc;
+    font-size: 0.4375rem;
+}
+#main .product .detail {
+    padding-top: 0.625rem;
+    font-size: 0.5rem;
+}
+#main .product .detail >img:first-of-type {
+    width: 3.75rem;
+    height: 3.75rem;
+    float: right;
+    margin-top: 0.3125rem;
+    margin-left: 0.3125rem;
+}
+#main .product .detail >img:last-of-type {
+    width: 100%;
+}
+#main .product .btn-shopping {
+    text-align: center;
+    padding: 0.3125rem 0.625rem;
+}
+#main .product .btn-shopping > button {
+    width: 100%;
+    font-size: 0.4375rem;
+}
+#main .product .btn-shopping > button > i {
+    margin-right: 0.15625rem;
+}
+#main .comment .writeComment {
+    font-size: 0.5rem;
+    position: relative;
+    margin: 0 0.15625rem;
+}
+#main .comment .writeComment > textarea {
+    border-radius: 0.09375rem;
+    border-color: #ccc;
+    width: 100%;
+}
+#main .comment .writeComment > button {
+    position: absolute;
+    width: 3.125rem;
+    height: 1.21875rem;
+    border-radius: 0.09375rem;
+    bottom: 0.1875rem;
+    right: 0;
+    font-size: 0.4375rem;
+}
+#main .comment .newComment > p {
+    font-size: 0.5rem;
+    margin: 0.3125rem 0 0.3125rem 0.15625rem;
+}
+#main .comment .newComment .content {
+    height: 0.625rem;
+    background-color: #f2f2f2;
+}
+#main .bottom {
+    padding: 0 0.15625rem;
+    height: 1.125rem;
+    line-height: 1.125rem;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.4375rem;
+}
+#main .bottom > span {
+    line-height: 1.125rem;
+}
+#main .bottomBanner {
+    position: relative;
+    background-color: #434343;
+    padding: 0.3125rem;
+    margin: 1.25rem 0 0.625rem 0;
+}
+#main .bottomBanner > img {
+    width: 2rem;
+    height: 2rem;
+    float: left;
+}
+#main .bottomBanner .text {
+    color: #fff;
+    overflow: hidden;
+    font-size: 0.5625rem;
+    padding-left: 0.3125rem;
+}
+#main .bottomBanner .text > h4 {
+    font-size: 0.5625rem;
+}
+#main .bottomBanner .text > button {
+    position: absolute;
+    right: 0.3125rem;
+    top: 0.3125rem;
+    padding: 0.125rem 0.375rem;
+    font-size: 0.4375rem;
+}
+#main .bottomBanner .text > p {
+    font-size: 0.4375rem;
+    line-height: 0.625rem;
+    color: #fee6c2;
+}
+#footer {
+    background-color: #ebebeb;
+}
+#footer .shortCut {
+    padding: 0.46875rem 0;
+    font-size: 0.375rem;
+    text-align: center;
+    margin-bottom: 1.375rem;
+}
+#footer .shortCut > a:first-of-type {
+    color: red;
+}
+#footer .shortCut > p {
+    margin: 0;
+}
+#footer .goShopping {
+    width: 100%;
+    height: 1.375rem;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+}
+#footer .goShopping .col-xs-4 {
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    padding: 0.09375rem 0;
+    font-size: 0.4375rem;
+}
+#footer .goShopping .col-xs-4 > p {
+    border-bottom: 0;
+}
+#footer .goShopping .col-xs-8 {
+    background-color: #ff841d;
+    text-align: center;
+    font-size: 0.5625rem;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    color: #fff;
+}

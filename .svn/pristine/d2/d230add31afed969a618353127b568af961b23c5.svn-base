@@ -1,0 +1,25 @@
+$(function(){
+    getGoodsList();
+});
+
+function getGoodsList(){
+    $.ajax({
+        url:"http://127.0.0.1:9090/api/getmoneyctrl",
+        data:{
+            pageid:1
+        },
+        success:function(data){
+            // console.log(data);
+            // 处理数据
+            for(var i =0 ; i<data.result.length;i++){
+                var temp = data.result[i].productComCount.split("有");
+                var temp1 = temp[1].split("人评论");
+                data.result[i].productComCount = temp1[0];
+                // console.log(data.result[i].productComCount);
+            }
+            // 渲染模板
+            var html = template("goodsTmp",data);
+            $("#main").html(html);
+        }
+    })
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/promotion.css">
+</head>
+<body>
+<header id="header">
+    <a href="#" class="icon-back"><span class="glyphicon glyphicon-menu-left"></span></a>
+    <a href="#" class="app"><img src="./images/header_app.png" alt=""></a>
+    <h1>省钱控 - 最新优惠</h1>
+</header>
+<section id="main">
+    <div class="product">
+    </div>
+    <div class="category">
+        <a href="#header" type="button" class="btn btn-default prev">上一页</a>
+        <a href="#header" type="button" class="btn btn-default next">下一页</a>
+        <select name="" id="select">
+        </select>
+        <span class="glyphicon glyphicon-triangle-bottom arr"></span>
+    </div>
+    <div class="bottom">
+        <a href="index.html">首页</a>
+        <span>> &nbsp;&nbsp;省钱控</span>
+    </div>
+    <div class="blank bdt"></div>
+</section>
+<footer id="footer">
+    <div class="container">
+        <div class="row bdt bdb">
+            <div class="col-xs-3 ">登陆</div>
+            <div class="col-xs-3  bdl bdr">注册</div>
+            <div class="col-xs-6 ">
+                <a href="#header">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="shortCut">
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <span> -- 掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<script id="productTmp" type="text/html">
+    {{each result}}
+        <div class="media" data-productId="{{$value.productId}}">
+            <div class="media-left">
+                <a href="#">
+                    {{#$value.productImgSm}}
+                </a>
+            </div>
+            <div class="media-body">
+                <span class="media-heading">{{$value.productName}}</span>
+                <span class="price">{{$value.productPinkage}}</span>
+                <p>
+                    <span class="left">{{$value.productFrom}} | {{$value.productTime}}</span>
+                    <span class="right"><i class="glyphicon glyphicon-comment"></i>{{$value.productComCount.charAt(1)}}</span>
+                </p>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<script id="pageTmp" type="text/html">
+    {{each total}}
+        {{if $index == pageId}}
+        <option selected>{{$index + 1}}/{{total.length}}</option>
+        {{else}}
+        <option>{{$index + 1}}/{{total.length}}</option>
+        {{/if}}
+    {{/each}}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/promotion.js"></script>
+</body>
+</html>

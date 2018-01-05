@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./less/brandsProduct.css">
+
+</head>
+
+<body>
+    <!-- 顶部通栏 -->
+    <header id="header" class="clearfix">
+        <a href="index.html" class="logo-left">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="onload-app-right">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+
+    <!-- 搜索栏 -->
+    <section id="search">
+        <div class="search">
+            <form action="#">
+                <input type="search" placeholder="请输入你想比价的商品">
+            </form>
+            <button>搜索</button>
+        </div>
+    </section>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        <div class="product">
+
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">登录</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4">
+                    <i class="glyphicon glyphicon-arrow-up"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="website">
+            <p>
+                <a href="#" class="phone-app">手机APP下载</a>
+                <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+    <script id="brandsProductTmp" type="text/html">
+        {{each result as value i}}
+        <a href="productComment.html?productid={{value.productId}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        {{#value.productImg}}
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="title">
+                            {{value.productName}}
+                        </div>
+                        <div class="price">
+                            {{value.productPrice}}
+                        </div>
+                        <div class="other">
+                            <span class="quote">{{value.productQuote}}</span>
+                            <span class="comment">{{value.productCom}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/brandsProduct.js"></script>
+</body>
+
+</html>

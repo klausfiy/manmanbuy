@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的慢慢买白菜价</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./mmBuy/style.css">
+    <link rel="stylesheet" href="../less/baicaijia.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="baicaijia.html" class="main-logo">白菜价</a>
+        <form action="#" class="search">
+            <input type="search" placeholder="好宝贝  等你搜">
+        </form>
+        <a href="#" class="main-cat">
+            <i class="glyphicon glyphicon-list"></i>
+        </a>
+
+    </header>
+    <main id="main">
+        <!-- 轮播图区域 -->
+        <section id="slide" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/slide1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/slide2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/slide3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/slide4.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination">
+            </div>
+        </section>
+        <!-- 导航栏区域 -->
+        <nav id="nav">
+            <div class="baicaijiaTitle" id="wrapper">
+                <ul>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 商品列表 -->
+        <section id="product-list">
+            
+        </section>
+    </main>
+
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">登录</div>
+                <div class="col-xs-4">注册</div>
+                <div class="col-xs-4">
+                    <i class="glyphicon glyphicon-arrow-up"></i>返回顶部</div>
+            </div>
+        </div>
+        <div class="website">
+            <p>
+                <a href="#" class="phone-app">手机APP下载</a>
+                <a href="#" class="phone">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+    <!-- 白菜价标题模板 -->
+    <script id="baicaijiaTitleTmp" type="text/html">
+        {{each result as value i}}
+        <li class="pull-left" data-title="{{value.titleId}}">
+            <a href="javascript:;">{{value.title}}</a>
+        </li>
+        {{/each}}
+    </script>
+
+
+    <!-- 白菜价商品模板 -->
+    <script id="baicaijiaproductTmp" type="text/html">
+        {{each result as value i }}
+        <div class="product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#">
+                            {{#value.productImg}}
+                        </a>
+                    </div>
+                    <div class="col-xs-8">
+                        {{#value.productName}}
+                        <div class="price">
+                            {{#value.productPrice}}
+                        </div>
+                        {{#value.productCouponRemain}}
+                        <div class="discount">
+                            {{#value.productCoupon}}
+                        </div>
+                        {{#value.productHref}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../js/baicaijia.js"></script>
+</body>
+
+</html>

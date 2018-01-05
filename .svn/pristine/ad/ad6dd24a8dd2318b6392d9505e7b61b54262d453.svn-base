@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买~分类页</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./less/category.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html">
+            <img src="./images/header_app.png" class="header-app" alt="">
+            <img src="./images/header_logo.png" class="header-logo" alt="">
+        </a>
+    </header>
+    <main id="main">
+        <!-- minirefresh开头的class请勿修改 -->
+        <div id="minirefresh" class="minirefresh-wrap">
+            <div class="minirefresh-scroll">
+                <form action="#">
+                    <input type="search" class="search" placeholder="请输入想要搜索的商品">
+                    <bottom class="btn-search">搜索</bottom>
+                </form>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" class="glyphicon glyphicon-menu-down" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    大家电
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                        <div class="col-xs-4"><a href="#">空调</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4"><a href="#">登入</a></div>
+                <div class="col-xs-4"><a href="#">注册</a></div>
+                <div class="col-xs-4"><a href="#" class="glyphicon glyphicon-circle-arrow-up">返回顶部</a></div>
+            </div>
+        </div>   
+        <!-- <div class="app">
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#"> -- 掌上比价平台</a>
+            <p>m.manmanbuy.com</p>
+        </div>  -->
+    </footer>
+    <script id = "getFirstCategoryTmp" type="text/html">
+        {{each result as value i}}
+        <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading{{i}}" data-id="{{value.titleId}}">
+                    <h4 class="panel-title">
+                        <a role="button" class="glyphicon glyphicon-menu-down" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapse{{i}}">
+                            {{value.title}}
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{i}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading{{i}}">
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </script>
+    <script id="getSecondCategoryTmp" type="text/html">
+        <div class="container">
+            <div class="row">
+                {{each result as value i}}
+                <div class="col-xs-4"><a href="categorylist.html?id={{value.categoryId}}">{{value.category}}</a></div>
+                {{/each}}
+            </div>
+        </div>
+        
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

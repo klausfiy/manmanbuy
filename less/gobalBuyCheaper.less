@@ -1,0 +1,136 @@
+@import "base.less";
+@main-color:#f18622;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+    box-sizing: border-box;
+    /*  清除移动端点击（按住）高亮颜色 */
+    -webkit-tap-highlight-color: transparent;
+}
+html,body{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color:#666;
+}
+i{
+    font-style: normal;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.clearfix{
+    zoom: 1;
+}
+.bb{
+    border-bottom: 1px solid #ccc;
+}
+
+// 头部样式
+    #header{
+        color: #fff;
+        .arrow-left{
+            color: #fff;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        > p{
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+            margin-top: -30px
+        }
+        height: 50px;
+        .onload-app-right{
+            position: absolute;
+            display: block;
+            right: 10px;
+            top: 8px;
+        }
+    }
+
+// 产品展示样式
+    #main{
+        padding: 10px;
+        // height: 400px;
+        position: relative;
+        .media{
+            margin-top: 5px;
+            .bb;
+            .media-left{
+                a{
+                    display: block;
+                    img{
+                    height: 100px;
+                    width: 100px;
+                    padding: 10px;
+                    }
+                }
+                
+            }
+            .media-body{
+                font-size: 10px;
+                .media-heading{
+                    .prize{
+                        color: #f10215;
+                    }
+                }
+                > P{
+                    position: relative;
+                    bottom: -15px;
+                    margin: 0;
+                    .commemts{
+                    position: absolute;
+                    right: 10px;
+                }
+                
+                }
+            }
+        }
+    }
+
+// 底部样式
+    #footer{
+        p{
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            > a {
+                color: #f10215;
+            }
+        }
+    }
+    #moreProduct{
+        position: relative;
+        height: 66px;
+        .left-perv{
+            padding: 5px 10px;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            border-radius: 5px;
+        }
+        #pageCate{
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+        }
+        .right-next{
+            padding: 5px 10px;
+            position: absolute;
+            top: 10px;            
+            right: 25px;            
+            border-radius: 5px;            
+        }
+    }

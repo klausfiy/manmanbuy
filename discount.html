@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买~优惠页</title>
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/minirefresh/css/minirefresh.min.css">
+    <link rel="stylesheet" href="./less/discount.css">
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <a href="index.html" class="glyphicon glyphicon-menu-left"></a>
+            <img src="./images/header_app.png" class="header-app" alt="">
+            <h4>优惠券</h4>
+        </div>
+    </header>
+    <main id="main">
+        <!-- minirefresh开头的class请勿修改 -->
+        <div id="minirefresh" class="minirefresh-wrap">
+            <div class="minirefresh-scroll">
+                <form action="#">
+                    <input type="search" class="search" placeholder="请输入想要搜索的优惠券">
+                    <bottom class="btn-search">搜索</bottom>
+                </form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="" herf="#">
+                                <img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt="">
+                                <span>肯德基</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <a href="index.html">首页 > </a>
+                    <a href="discount.html">优惠券 </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#">登入</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="glyphicon glyphicon-circle-arrow-up">返回顶部</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="app">
+            <a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#"> -- 掌上比价平台</a>
+            <p>m.manmanbuy.com</p>
+        </div>  -->
+    </footer>
+    <script id="getDiscountTmp" type="text/html">
+        {{each result as value i}}
+            <div class="col-xs-4">
+                <a href="discountlist.html?id={{value.couponId}}">
+                    <img src="{{value.couponImg}}" alt="">
+                    <span>{{value.couponTitle}}</span>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/minirefresh/js/minirefresh.min.js"></script>
+    <script src="./js/discount.js"></script>
+</body>
+
+</html>
